@@ -1,0 +1,14 @@
+Datenstrukturen, Algorithmen und Komplexitätstheorie
+====================================================
+
+1. Algorithmus -- grundlegende Begriffe und Eigenschaften
+2. Repräsentation von Daten
+3. Statische Datentypen und Datenstrukturen
+4. Mensch-Maschine-Interaktion, Betriebssysteme
+5. Dynamische Datentypen
+6. Sortierungs- und Suchmethoden
+7. Transformationen von Daten
+8. Daten als Kommunikationsmittel
+9. Parallele Algorithmen
+10. Genetische Algorithmen
+

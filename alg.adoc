@@ -1,14 +1,153 @@
 Datenstrukturen, Algorithmen und Komplexitätstheorie
 ====================================================
 
-1. Algorithmus -- grundlegende Begriffe und Eigenschaften
-2. Repräsentation von Daten
-3. Statische Datentypen und Datenstrukturen
-4. Mensch-Maschine-Interaktion, Betriebssysteme
-5. Dynamische Datentypen
-6. Sortierungs- und Suchmethoden
-7. Transformationen von Daten
-8. Daten als Kommunikationsmittel
-9. Parallele Algorithmen
-10. Genetische Algorithmen
+:author: ondra.havel@gmail.com
+:copyright: 2019
+:backend: slidy
+:max-width: 45em
+:data-uri:
+:icons:
 
+
+. Algorithm - the Basics
+. Repräsentation von Daten
+. Statische Datentypen und Datenstrukturen
+. Mensch-Maschine-Interaktion, Betriebssysteme
+. Dynamische Datentypen
+. Sortierungs- und Suchmethoden
+. Transformationen von Daten
+. Daten als Kommunikationsmittel
+. Parallele Algorithmen
+. Brute Force Methods
+
+
+// VL01
+
+== Algorithm - the Basics
+
+. Definition
+. Algorithm Types
+. Interpretation
+. Sample Algorithm: Digital Root
+. Complexity
+. Output Space
+. Broken Code
+. Recursive Algorithms: factorial, Fibonacci numbers, The Tower of Hanoi
+
+
+=== Definition
+
+abc
+
+=== Algorithm Types
+
+abc
+
+=== Interpretation
+
+abc
+
+=== Sample Algorithm: Digital Root
+
+abc
+
+=== Complexity
+
+abc
+
+=== Output Space
+
+abc
+
+=== Broken Code
+
+abc
+
+=== Recursive Algorithms
+
+abc
+
+
+// VL02
+
+Data Representation
+-------------------
+
+. Memory organization
+. Elementary number types
+. Data endianity
+. Boolean logic
+. The integer
+. Binary and hexadecimal radix, conversions
+. The real, float, single, double, and co.
+
+
+
+Static Data Types And Structures
+--------------------------------
+
+. The structure
+. Memory alignment
+. Static strings
+. Programming with strings
+
+
+
+Operating Systems and Interaction Methods
+-----------------------------------------
+
+. Operating system structure
+. Memory management
+. Task scheduling
+. Input processing, polling, spin lock
+. Event based environment
+
+
+
+Dynamic Data Types
+------------------
+
+. List
+. Hash
+. File
+
+
+
+Search and Sort
+---------------
+
+. Binary trees
+. Distributed hash tables
+. Bubble sort
+. Insertion sort
+. Merge sort
+. Quick sort
+
+
+
+Data Transformations
+--------------------
+
+. Compression types
+. Simple compression and decompression
+
+
+Data Transport
+--------------
+
+. Structure serialization and deserialization
+. XML, JSON, ASN.1
+
+
+Parallel Algorithms
+-------------------
+
+. The Dining Philosophers Problem
+. Synchronization Primitives
+
+
+Brute Force Methods
+-------------------
+
+. Monte Carlo
+. Genetic Algorithms

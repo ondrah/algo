@@ -1,16 +1,23 @@
 Datenstrukturen, Algorithmen und Komplexitätstheorie
 ====================================================
 
-. Algorithm - the Basics
-. Repräsentation von Daten
-. Statische Datentypen und Datenstrukturen
-. Mensch-Maschine-Interaktion, Betriebssysteme
-. Dynamische Datentypen
-. Sortierungs- und Suchmethoden
-. Transformationen von Daten
-. Daten als Kommunikationsmittel
-. Parallele Algorithmen
-. Brute Force Methods
+// TODO: Termine abstimmen
+
+. 22. 11. Algorithm - the Basics
+. 29. 11. Repräsentation von Daten
+. 6. 12.  Statische Datentypen und Datenstrukturen
+. 13. 12. Mensch-Maschine-Interaktion, Betriebssysteme
+. 20. 12. Dynamische Datentypen
+. 27. 12. Sortierungs- und Suchmethoden	(no go)
+. 3. 1. Transformationen von Daten		(no go)
+. 10. 1. Daten als Kommunikationsmittel
+. 17. 1. Parallele Algorithmen
+. 24. 1. Brute Force Methods
+31. 1.
+7. 2.
+14. 2.
+21. 2.
+28. 2.
 
 
 // VL02

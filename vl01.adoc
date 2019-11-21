@@ -2,28 +2,28 @@
 Ondřej Havel <ondra.havel@gmail.com>
 v1.0, November 2019
 
-qwopekpk
-eqweqw
-wqeqweq
 
 == Agenda
 
-. Definition
-. Algorithm Types
-. Interpretation
-. Sample Algorithm: Digital Root
-. Complexity
-. Output Space
-. Broken Code
-. Recursive Excercises
+- https://github.com/ondrah/algo/
+- Definition
+- Algorithm Types
+- Interpretation
+- Sample Algorithm: Digital Root
+- Complexity
+- Output Domain
+- Broken Code
+- Recursive Excercises
 
 
 == Definition
 
-An Algorithm is a sequence of steps that describes an approach to a solution of
+An algorithm is a sequence of steps that describes an approach to a solution of
 a given problem. Every computer program that ends with a result is basically
 based on a set of algorithms. Algorithms, however, are not just confined for use
 in computers and can be used to solve generic tasks.
+
+image::img/vl01_steps.png[align="center"]
 
 
 == Algorithm Types
@@ -37,7 +37,7 @@ in computers and can be used to solve generic tasks.
 - Brute Force
 - and many others...
 
-Note: algorithms commonly combine multiple algorithm types
+Note: larger algorithms usually combine multiple algorithm types
 
 
 == Divide and Conquer
@@ -47,7 +47,7 @@ the same type. The combination of sub-solutions leads to the global solution.
 
 Example: merge sort
 
-image:img/vl01_mergesort.png[]
+image::img/vl01_mergesort.png[]
 
 == Dynamic
 
@@ -61,8 +61,6 @@ Example: Fibonacci numbers
 include::code/vl01_fibo.pl[]
 ----
 
-Exercise: implement a recursive algorithm
-
 
 == Recursive
 
@@ -71,7 +69,7 @@ problem into sub-problems of the same nature.  The result of one recursion is
 the input for the next recursion.  Recursion works in environments where the
 algorithm is able to call itself.
 
-image:img/vl01_recursion.jpg[]
+image::img/vl01_recursion.jpg[align="center"]
 
 
 == Backtracking
@@ -82,15 +80,15 @@ at the global level. Backtracking algorithms typically use recursion.
 
 Example: routing algorithms
 
-image:img/vl01_maze.png[width=400]
+image::img/vl01_maze.png[width=400, align="center"]
 
 
 == Greedy, Randomized
 
 === Greedy 
 
-Greedy usually solve optimization tasks without the guarantee of finding a
-solution. The result should be a solution candidate which matches the
+Greedy algorithm usually solve optimization tasks without the guarantee of
+finding a solution. The result should be a solution candidate which matches the
 requirement of being 'good enough'.
 
 Example: genetic algorithms
@@ -112,15 +110,7 @@ Example: password guessing
 
 [source,perl]
 ----
-foreach $l0 ( 'a' ... 'z' ) {
-    foreach $l1 ( 'a' ... 'z' ) {
-        foreach $l2 ( 'a' ... 'z' ) {
-            foreach $l3 ( 'a' ... 'z' ) {
-                print $l0, $l1, $l2, $l3, "\n";
-            }
-        }
-    }
-}
+include::code/vl01_brute.pl[]
 ----
 
 == Notation and Interpretation
@@ -128,21 +118,12 @@ foreach $l0 ( 'a' ... 'z' ) {
 - What you essentially do
 	* Data transformation
 	* Data comparison
-	* Jump or transition to the next instruction
+	* *Jump* or transition to the next *instruction*
 - Plain text preferably with clear instructions
 - Usually a pseudocode of a C-like language
-	* C, Perl, Java, Python, Basic
+	* C, Perl, Java, Python, Basic, and many others
 
-
-== Sample Algorithm: Digital Root
-
-The digital root (also repeated digital sum) of a natural number in a
-given number base is the (single digit) value obtained by an iterative process
-of summing digits, on each iteration using the result from the previous
-iteration to compute a digit sum. The process continues until a single-digit
-number is reached. (source: Wikipedia)
-
-Fixed assumption: base = 10
+image::img/vl01_notation.png[align="center"]
 
 
 == Complexity
@@ -165,15 +146,47 @@ domain.
 
 Try programming 3D models on https://openjscad.org
 
-Hint: search for `openscad cheat sheet`
+Hint: search for _openscad cheat sheet_
 
-image:img/vl01_openscad.png[]
+image::img/vl01_openscad.png[align="center"]
 
-== Things Getting Bad
 
-image:img/vl01_shcool.jpg[width=1000]
+== If something can go wrong, it will.
 
-== Code Review
+image::img/vl01_shcool.jpg[]
+
+- Robustness
+- Consistency
+- Determinism
+- Testing
+- Dual Programming
+- Code Reviews
+
+
+== Code Review I
+
+[source,c]
+----
+int evaluate_pivot(int adj, char *my_string)
+{
+    int b = adj - 1;
+    int idx = b * b;
+
+    if(idx == 0)
+    {
+        return forward_direction(0, my_string);
+    }
+
+    if(idx > 0)
+    {
+        return forward_direction(+1, my_string);
+    }
+    
+    return forward_direction(-1, my_string);
+}
+----
+
+== Code Review II
 
 [source,c]
 ----
@@ -184,18 +197,17 @@ int rand_between(int a, int b)
 {
     int r;
 
-    do {
+    do
+    {
         r = rand();
-    } while(r < a || r > b);
+    }
+    while(r < a || r > b);
 
     return $r;
 }
 ----
 
-
-== Recursive Exercises
-
-Example: factorial
+== Sample Algorithm: Factorial
 
 [source, c]
 ----
@@ -208,10 +220,29 @@ int factorial(int n)
 }
 ----
 
-DIY:
+== Sample Algorithm: Digital Root
 
-- Implement factorial function as a dynamic algorithm
+The digital root (also repeated digital sum) of a natural number in a
+given number base is the (single digit) value obtained by an iterative process
+of summing digits, on each iteration using the result from the previous
+iteration to compute a digit sum. The process continues until a single-digit
+number is reached. (source: Wikipedia)
+
+Fixed assumption: base = 10
+
+*Example:*
+
+Input 11111, Output 5
+
+Input 999, Output 9
+
+Input 68, Output 5
+
+
+== Exercises
+
+- Factorial as a dynamic algorithm
 - Lucas Numbers as a recursive algorithm
-- The Tower of Hanoi
-- Integer subsequence with the highest sum.
+- Tower of Hanoi
+- Integer subsequence with the highest sum
 

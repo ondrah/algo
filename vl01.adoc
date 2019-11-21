@@ -245,4 +245,4 @@ Input 68, Output 5
 - Lucas Numbers as a recursive algorithm
 - Tower of Hanoi
 - Integer subsequence with the highest sum
-
+- Bug on a string

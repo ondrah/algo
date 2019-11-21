@@ -2,6 +2,10 @@
 Ondřej Havel <ondra.havel@gmail.com>
 v1.0, November 2019
 
+qwopekpk
+eqweqw
+wqeqweq
+
 == Agenda
 
 . Definition
@@ -54,17 +58,7 @@ Example: Fibonacci numbers
 
 [source,perl]
 ----
-$a = 1; $b = 2;
-
-print "$a, $b, ";
-
-for($i = 0; $i < 10; $i++) {
-    $c = $b;
-    $b = $b + $a;
-    $a = $c;
-
-    print $b, ", ";
-}
+include::code/vl01_fibo.pl[]
 ----
 
 Exercise: implement a recursive algorithm
@@ -72,8 +66,10 @@ Exercise: implement a recursive algorithm
 
 == Recursive
 
-A special type of algorithm using the specific ability of the programming
-environment in which a running routine is able to call itself.
+A special type of algorithm using a method of simplification that divides the
+problem into sub-problems of the same nature.  The result of one recursion is
+the input for the next recursion.  Recursion works in environments where the
+algorithm is able to call itself.
 
 image:img/vl01_recursion.jpg[]
 
@@ -151,8 +147,16 @@ Fixed assumption: base = 10
 
 == Complexity
 
-Example: Integer subsequence with the highest sum.
-
+.A small overview
+[width="80%",frame="topbot",options="header"]
+|====================================================
+|Complexity | n = 10 | n = 100 | n = 1000 | n = 10000
+|log(n)     | 1 ns   | 2 ns    | 3 ns     | 4 ns
+|n*log(n)   | 10 ns  | 100 ns  | 1 us     | 10 us
+|n^2^       | 100 ns | 10 us   | 1 ms     | 100 ms
+|n^3^       | 1 us   | 1 ms    | 1 s      | 16.7 min
+|2^n^       | 1 us   | 10^24^ years | 10^302^ years | 10^3011^ years
+|====================================================
 
 == Output Domain
 
@@ -205,7 +209,9 @@ int factorial(int n)
 ----
 
 DIY:
-- Convert the factorial algorithm into the dynamic type 
-- Lucas Numbers
+
+- Implement factorial function as a dynamic algorithm
+- Lucas Numbers as a recursive algorithm
 - The Tower of Hanoi
+- Integer subsequence with the highest sum.
 

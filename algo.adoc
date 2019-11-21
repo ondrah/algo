@@ -1,14 +1,6 @@
 Datenstrukturen, Algorithmen und Komplexitätstheorie
 ====================================================
 
-:author: ondra.havel@gmail.com
-:copyright: 2019
-:backend: slidy
-:max-width: 45em
-:data-uri:
-:icons:
-
-
 . Algorithm - the Basics
 . Repräsentation von Daten
 . Statische Datentypen und Datenstrukturen
@@ -19,53 +11,6 @@ Datenstrukturen, Algorithmen und Komplexitätstheorie
 . Daten als Kommunikationsmittel
 . Parallele Algorithmen
 . Brute Force Methods
-
-
-// VL01
-
-== Algorithm - the Basics
-
-. Definition
-. Algorithm Types
-. Interpretation
-. Sample Algorithm: Digital Root
-. Complexity
-. Output Space
-. Broken Code
-. Recursive Algorithms: factorial, Fibonacci numbers, The Tower of Hanoi
-
-
-=== Definition
-
-abc
-
-=== Algorithm Types
-
-abc
-
-=== Interpretation
-
-abc
-
-=== Sample Algorithm: Digital Root
-
-abc
-
-=== Complexity
-
-abc
-
-=== Output Space
-
-abc
-
-=== Broken Code
-
-abc
-
-=== Recursive Algorithms
-
-abc
 
 
 // VL02

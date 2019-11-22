@@ -8,12 +8,12 @@ v1.0, November 2019
 - https://github.com/ondrah/algo/
 - Definition
 - Algorithm Types
-- Interpretation
-- Sample Algorithm: Digital Root
+- Notation and Interpretation
 - Complexity
 - Output Domain
-- Broken Code
-- Recursive Excercises
+- Code Review
+- Example Algorithm: Digital Root
+- Excercises
 
 
 == Definition
@@ -203,11 +203,11 @@ int rand_between(int a, int b)
     }
     while(r < a || r > b);
 
-    return $r;
+    return r;
 }
 ----
 
-== Sample Algorithm: Factorial
+== Example: Factorial
 
 [source, c]
 ----
@@ -220,7 +220,7 @@ int factorial(int n)
 }
 ----
 
-== Sample Algorithm: Digital Root
+== Example: Digital Root
 
 The digital root (also repeated digital sum) of a natural number in a
 given number base is the (single digit) value obtained by an iterative process

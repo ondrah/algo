@@ -4,6 +4,7 @@ Datenstrukturen, Algorithmen und Komplexitätstheorie
 .Termine
 [width="80%",frame="topbot",options="header"]
 |====================================================
+|Datum  | Thema
 |22. 11.| Algorithmen, grundlegende Begriffe
 |29. 11.| Repräsentation von Daten
 |6. 12. | Statische Datentypen und Datenstrukturen

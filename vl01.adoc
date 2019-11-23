@@ -1,4 +1,4 @@
-= VL01 Algorithms - the Basics
+= VL01 Introduction
 Ondřej Havel <ondra.havel@gmail.com>
 v1.0, November 2019
 
@@ -58,7 +58,17 @@ Example: Fibonacci numbers
 
 [source,perl]
 ----
-include::code/vl01_fibo.pl[]
+$a = 1; $b = 2;
+
+print "$a, $b, ";
+
+for($i = 0; $i < 10; $i++) {
+	$c = $b;
+	$b = $b + $a;
+	$a = $c;
+
+	print $b, ", ";
+}
 ----
 
 
@@ -110,7 +120,15 @@ Example: password guessing
 
 [source,perl]
 ----
-include::code/vl01_brute.pl[]
+foreach $l0 ( 'a' ... 'z' ) {
+    foreach $l1 ( 'a' ... 'z' ) {
+        foreach $l2 ( 'a' ... 'z' ) {
+            foreach $l3 ( 'a' ... 'z' ) {
+                print $l0, $l1, $l2, $l3, "\n";
+            }
+        }
+    }
+}
 ----
 
 == Notation and Interpretation
@@ -138,6 +156,8 @@ image::img/vl01_notation.png[align="center"]
 |n^3^       | 1 us   | 1 ms    | 1 s      | 16.7 min
 |2^n^       | 1 us   | 10^24^ years | 10^302^ years | 10^3011^ years
 |====================================================
+
+_Merge sort has performance/complexity of O(n log n)._
 
 == Output Domain
 
@@ -232,17 +252,28 @@ Fixed assumption: base = 10
 
 *Example:*
 
-Input 11111, Output 5
+Input 11111, Output 5 (1+1+1+1+1 = 5)
 
-Input 999, Output 9
+Input 999, Output 9 (9+9+9 = 27 => 2+7 = 9)
 
-Input 68, Output 5
+Input 68, Output 5 (6+8 = 14 => 1+4 = 5)
 
 
 == Exercises
 
+
 - Factorial as a dynamic algorithm
 - Lucas Numbers as a recursive algorithm
+	* Same principle as Fibonacci, starting with 2, 1
 - Tower of Hanoi
+
+image::img/vl01_hanoi.gif[]
+
 - Integer subsequence with the highest sum
+	* Example input: 1, 2, 3, -5, 10, 11, -4
+	* Expected output: 10, 11
 - Bug on a string
+	* A bug travels on an elastic string of 1 m initial length. Bug's velocity
+	is 1 cm per second. But the string doubles its length every second. What
+	happens and when?
+

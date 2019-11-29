@@ -1,7 +1,6 @@
 = VL01 Introduction
 Ondřej Havel <ondra.havel@gmail.com>
-v1.0, November 2019
-
+22. November
 
 == Agenda
 
@@ -274,6 +273,9 @@ image::img/vl01_hanoi.gif[]
 	* Expected output: 10, 11
 - Bug on a string
 	* A bug travels on an elastic string of 1 m initial length. Bug's velocity
-	is 1 cm per second. But the string doubles its length every second. What
+	is 1 cm per second. The string stretches at a constant rate 1 m per second. What
 	happens and when?
+	* Spoiler: link:https://en.wikipedia.org/wiki/Ant_on_a_rubber_rope[]
+	* Discrete simplification: Imagine a running metronome with two beats, on
+	every beat one the bug goes 1 cm, on every beat two the string length grows 1 m.
 

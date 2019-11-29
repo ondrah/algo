@@ -141,7 +141,7 @@ system or the sections of a date.
 | 0		| 0		|	0	  |	0	   | 0		 | 1	 |	1
 | 0		| 1		|	0	  |	1	   | 1		 | 1	 |	0
 | 1		| 0		|	0     |	1      | 1		 | 0	 |	1
-| 1		| 1		|	1     | 1      | 1		 | 0	 |	0
+| 1		| 1		|	1     | 1      | 0		 | 0	 |	0
 |====================================================
 
 - Complementary operations: nand, nor, nxor
@@ -158,7 +158,8 @@ system or the sections of a date.
 
 == Boolean Expressions
 
-- Right to left interpretation (C-based languages)
+- Left to right interpretation (C-based languages)
+  * if is_engine_ready() == false, test_engine() will not be run!
 
 - Programming essentials: simplify/negate logical expressions
 
@@ -210,12 +211,12 @@ if(1) { // equivalent if(true) {
 [width="80%",frame="topbot",options="header"]
 |====================================================
 | A		    | B		    | A AND B | A OR B | A XOR B | NOT A | NOT B
-| 10001111	| 11010000	| 10000000 | 11011111 | 11011111 | 01110000	 |	00101111
+| 10001111	| 11010000	| 10000000 | 11011111 | 01011111 | 01110000	 |	00101111
 |====================================================
 
 - A AND B; A & B
 - A OR B; A | B
-- NOT(A); ~A
+- NOT(A); NEG(A); ~A
 - Shift left/right: SHL <<, SHR >>
 
 
@@ -271,7 +272,7 @@ a = a ^ b;
 Implement an algorithm:
 
 - Input: unsigned integer value (decimal)
-- Ouput: number of bits with value 1
+- Output: number of bits with value 1
 
 
 == Exercise 1

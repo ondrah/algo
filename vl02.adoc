@@ -32,6 +32,9 @@ Data Representation
 .EPROM chip with exposed erase window
 image::img/vl02_eprom.jpg[width="300"]
 
+- Volatile memory - needs power to keep data
+
+
 == Memory Access - Technical Aspects
 
 - Power consumption
@@ -43,9 +46,9 @@ image::img/vl02_eprom.jpg[width="300"]
 
 .Example: Atmega328 Datasheet
 
-- 4/8/16/32K Bytes of In-System Self-Programmable Flash program memory
-- 256/512/512/1K Bytes EEPROM
-- 512/1K/1K/2K Bytes Internal SRAM
+- 32K Bytes of In-System Self-Programmable Flash program memory
+- 1K Bytes EEPROM
+- 2K Bytes Internal SRAM
 - Write/Erase Cycles: 10,000 Flash/100,000 EEPROM
 - Data retention: 20 years at 85°C/100 years at 25°C
 
@@ -77,7 +80,7 @@ image::img/vl02_eprom.jpg[width="300"]
 
 [source,c]
 ----
-// A small comparison showing differences between different compilers.
+// A small comparison showing differences between distinct compilers/PC systems.
 #include <stdio.h>
 
 void main() {
@@ -127,6 +130,8 @@ system or the sections of a date.
 
 - Type casting, consider uint16_t => uint8_t conversion with little and big
   endian.
+- Byte structure: bits, nibbles
+
 
 == Boolean Operations
 
@@ -211,7 +216,39 @@ if(1) { // equivalent if(true) {
 - A AND B; A & B
 - A OR B; A | B
 - NOT(A); ~A
-- SHL <<, SHR >>
+- Shift left/right: SHL <<, SHR >>
+
+
+== Basic Arithmetic
+
+image::img/vl02_wall_clock.png[width="400"]
+
+[source,c]
+----
+uint8_t i;
+
+for(;;) {
+    i++;
+    wait_one_second();
+}
+----
+
+.For/while transformation
+
+[source,c]
+----
+for(expression_1; condition; expression_2) {
+    loop_body();
+}
+
+expression_1;
+
+while(condition) {
+    loop_body();
+
+    expression_2;
+}
+----
 
 
 == Code Review I
@@ -233,8 +270,8 @@ a = a ^ b;
 
 Implement an algorithm:
 
-Input: unsigned integer value
-Ouput: number of bits with value 1 in its binary representation
+- Input: unsigned integer value (decimal)
+- Ouput: number of bits with value 1
 
 
 == Exercise 1

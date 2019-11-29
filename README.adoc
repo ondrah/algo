@@ -1,6 +1,12 @@
 Datenstrukturen, Algorithmen und Komplexitätstheorie
 ====================================================
 
+Pick your favorite language(s):
+- link:https://beginnersbook.com/java-tutorial-for-beginners-with-examples/[Java Tutorial]
+- link:https://www.tutorialspoint.com/perl/index.htm[Perl Tutorial]
+- link:https://www.tutorialspoint.com/cprogramming/index.htm[C Tutorial]
+- link:https://docs.microsoft.com/de-de/dotnet/csharp/tutorials/[C# Tutorial]
+
 .Termine
 [width="80%",frame="topbot",options="header"]
 |====================================================

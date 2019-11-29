@@ -9,13 +9,13 @@ Data Representation
 . Boolean logic
 . The integer
 . Binary and hexadecimal radix, conversions
-. The real, float, single, double, and co.
 
 
 
 Static Data Types And Structures
 --------------------------------
 
+. The real, float, single, double, and co.
 . The structure
 . Memory alignment
 . Static strings

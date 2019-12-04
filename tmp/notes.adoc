@@ -1,47 +1,26 @@
-// VL02
-
-Data Representation
--------------------
-
-. Memory organization
-. Elementary number types
-. Data endianity
-. Boolean logic
-. The integer
-. Binary and hexadecimal radix, conversions
-
-
-
-Static Data Types And Structures
---------------------------------
-
-. The real, float, single, double, and co.
-. The structure
-. Memory alignment
-. Static strings
-. Programming with strings
-
-
+// VL04
 
 Operating Systems and Interaction Methods
 -----------------------------------------
 
-. Operating system structure
+. Operating systems
 . Memory management
 . Task scheduling
 . Input processing, polling, spin lock
 . Event based environment
 
 
+// VL05
 
 Dynamic Data Types
 ------------------
 
-. List
+. List, Queue
 . Hash
 . File
 
 
+// VL06
 
 Search and Sort
 ---------------
@@ -54,6 +33,7 @@ Search and Sort
 . Quick sort
 
 
+// VL07
 
 Data Transformations
 --------------------
@@ -63,6 +43,8 @@ Data Transformations
 . Simple compression and decompression
 
 
+// VL08
+
 Data Transport
 --------------
 
@@ -70,12 +52,16 @@ Data Transport
 . XML, JSON, ASN.1
 
 
+// VL09
+
 Parallel Algorithms
 -------------------
 
 . The Dining Philosophers Problem
 . Synchronization Primitives
 
+
+// VL10
 
 Brute Force Methods
 -------------------

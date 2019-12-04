@@ -1,0 +1,48 @@
+= VL03 Static Data Types And Structures
+Ondřej Havel <ondra.havel@gmail.com>
+29. November
+
+
+
+Static Data Types And Structures
+--------------------------------
+
+- Integer
+- Real, float, single, double, etc.
+- Array, Stack, Queue
+- The structure and memory alignment
+- String
+- Regular expressions
+
+
+== Integer
+
+- Ranges
+- Signs
+- Operations
+- Examples
+
+
+== Real
+
+- Ranges
+- Organization
+
+
+== Array, Stack
+
+
+
+== String
+
+A string is often implemented as an array of bytes that stores a
+sequence of characters, using some character encoding.
+String may also denote more general arrays or other sequence (or list) data
+types and structures.
+
+- Storage
+- Encoding
+- Properties
+
+
+== Regular expressions

@@ -1,4 +1,4 @@
-= VL03 Static Data Types And Structures
+= VL03 Scalar Data Types
 Ondřej Havel <ondra.havel@gmail.com>
 6. December
 
@@ -10,7 +10,7 @@ Scalar Data Types
 - Integer
 - Double
 - Character, String
-- Regular expressions
+- Regular Expressions
 
 
 == Integer
@@ -141,7 +141,7 @@ Consider problems like sorting, error detection, length determination, and
 conversions between distinct encodings.
 
 
-== Regular expressions
+== Regular Expressions
 
 A regular expression, regex or regexp is a string that defines a search pattern.
 Such patterns can be used for match or replace operations on strings. The

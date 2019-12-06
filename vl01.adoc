@@ -12,7 +12,7 @@ Ondřej Havel <ondra.havel@gmail.com>
 - Output Domain
 - Code Review
 - Example Algorithm: Digital Root
-- Excercises
+- Exercises
 
 
 == Definition

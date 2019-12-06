@@ -1,48 +1,231 @@
 = VL03 Static Data Types And Structures
 Ondřej Havel <ondra.havel@gmail.com>
-29. November
+6. December
 
 
 
-Static Data Types And Structures
---------------------------------
+Scalar Data Types
+-----------------
 
 - Integer
-- Real, float, single, double, etc.
-- Array, Stack, Queue
-- The structure and memory alignment
-- String
+- Double
+- Character, String
 - Regular expressions
 
 
 == Integer
 
-- Ranges
-- Signs
-- Operations
-- Examples
-
-
-== Real
+[quote, The Merriam Webster Dictionary]
+Any of the natural numbers, the negatives of these numbers, or zero.
 
 - Ranges
-- Organization
+  * Signed: -(2^n-1^) to (2^n-1^ - 1)
+  * Unsigned: 0 to (2^n - 1^)
+
+- Fast hexadecimal => binary conversions because log~2~(16) = 4
+
+- Fast operations: Comparison, Negation, Addition, Multiplication
+
+.int32_t examples, the prefix 0x denotes a hexadecimal value 
+[width="80%",frame="topbot",options="header"]
+|============================
+| Real Value  | Memory Value
+| 0x0		  | 0x0
+| 0x1		  | 0x1
+| -0x1		  | 0xFFFFFFFF
+| -0x10	      | 0xFFFFFFF0
+| -0x100	  | 0xFFFFFF00
+| -0x1000	  | 0xFFFFF000
+| -0x10000	  | 0xFFFF0000
+| -0x100000	  | 0xFFF00000
+| -0x1000000  | 0xFF000000
+| -0x10000000 | 0xF0000000
+| -0x80000000 | 0x80000000
+|  0x7FFFFFFF | 0x7FFFFFFF
+|============================
 
 
-== Array, Stack
+== Double
+
+.IEEE-754 Standard for Floating-Point Arithmetic
+  Specifies interchange and arithmetic formats and methods for binary and decimal floating-point arithmetic in computer programming environments.
+
+image::img/vl03_ieee754_double.png[width="80%"]
 
 
+.Representation
 
-== String
+There are some reserved values for signed zero, infinity, and NaN (not a number).
+For non-reserved values, numeric representation can be obtained with the
+following formula:
+
+image::img/vl03_double_formula.svg[width="40%"]
+
+[source,c]
+----
+#include <stdio.h>
+
+int main()
+{
+    double a;
+    double b;
+
+    a = 1;
+    b = a + 1;
+    if(a == b) {
+        printf("this would be weird\n");
+    }
+
+    a = 10000000000000000.0;
+    b = a + 1;
+    if(a == b) {
+        printf("yes, this is perfectly normal\n");
+    }
+}
+----
+
+
+See link:https://en.wikipedia.org/wiki/Double-precision_floating-point_format[]
+for detailed information.
+
+
+== Character, String
 
 A string is often implemented as an array of bytes that stores a
 sequence of characters, using some character encoding.
 String may also denote more general arrays or other sequence (or list) data
 types and structures.
 
-- Storage
-- Encoding
-- Properties
+.American Standard Code for Information Interchange
+
+image::img/vl03_ascii7bit.png[width="100%"]
+
+== Character Encoding
+
+[source, csharp]
+----
+string name = "Antonín Dvořák";
+//name.Length == 14
+----
+
+.Abbreviations
+ UCS = Universal Coded Character Set; UTF = UCS Transformation Format
+
+
+.UTF-8
+
+UTF-8 encoded string occupies 17 bytes.
+
+----
+00000000: 41 6e 74 6f 6e c3 ad 6e 20 44 76 6f c5 99 c3 a1  Anton..n Dvo....
+00000010: 6b                                               k
+----
+
+.UTF-32
+
+UTF-32 encoded string occupies 56 bytes.
+
+----
+00000000: 00 00 00 41 00 00 00 6e 00 00 00 74 00 00 00 6f  ...A...n...t...o
+00000010: 00 00 00 6e 00 00 00 ed 00 00 00 6e 00 00 00 20  ...n.......n... 
+00000020: 00 00 00 44 00 00 00 76 00 00 00 6f 00 00 01 59  ...D...v...o...Y
+00000030: 00 00 00 e1 00 00 00 6b                          .......k...
+----
+
+- UTF-32 uses fixed four bytes
+- UTF-8 uses a byte at the minimum in encoding the characters
+- UTF-8 encoded file tends to be smaller
+- UTF-8 is compatible with ASCII
+
+Consider problems like sorting, error detection, length determination, and
+conversions between distinct encodings.
 
 
 == Regular expressions
+
+A regular expression, regex or regexp is a string that defines a search pattern.
+Such patterns can be used for match or replace operations on strings. The
+control syntax uses a limited set of characters: `*{}[]()^$.|*+?-`
+The implementations can vary, look at _Regular expressions in Java_, etc.
+
+.Boolean "or"
+ A vertical bar separates alternatives. apple|orange
+
+.Grouping
+ Parentheses are used to define the scope and precedence of the operators.
+For example, gray|grey and gr(a|e)y are equivalent patterns which both describe
+the set of "gray" or "grey". Grouping is also used to specify and extract
+specific data within the regex match.
+
+.Quantification
+ A quantifier how often the previous element must precede to match.
+
+- `?` 	optional occurrence, colou?r matches both "color" and "colour", also
+  used for greediness control
+- `*`   zero or more occurrence; ab*c matches "ac", "abc", "abbc", "abbbc", and so on.
+- `+` 	at least one occurrence; ab+c matches "abc", "abbc", "abbbc", and so on, but not "ac".
+- `{n}` 	The preceding item is matched exactly `n` times.
+- `{min,}` 	The preceding item is matched at least `min` times.
+- `{min,max}` 	The preceding item is matched at least `min` times, but less than `max` times. 
+
+
+.Wildcards
+
+- `^` beginning of a line (also used as a negation, see below)
+- `$` end of line
+- `.` match any character
+- `[]` determines a group of characters, `-` interval, `^` is negation
+  * `[a-z]` match any character between *a* and *z*
+  * `[0123456789]` or `[0-9]` match any decimal digit
+  * `[^A-Z]` match all characters except all between *a* and *z*
+
+.Implementation
+  The environment (programming language, text editor) usually defines some
+  specific abbreviations or macros.
+
+- `\d` decimal digit
+- `\w`, `\W` word character, non-word character
+- `\s`, `\S` space character, non-space character
+- `\b`, `\<`, `\>` word boundary, beginning/end of a word
+
+.Working with meta-characters
+	Meta-characters need to be escaped if they should be matched.
+
+Regex `\\d` matches string `\d`, regex `\*\+\+\?` matches string `*++?`
+
+== Regex Examples
+
+Notation: regular expressions are enclosed between two slashes /regex/.
+
+[source,perl]
+----
+/[a-z0-9_-]{3,16}/			# match a username
+/[a-z0-9_-]{6,18}/			# match a password
+/0x?([a-f0-9]+)/		    # match a hexadecimal number	
+/(\d\d):(\d\d):(\d\d)/		# match a date in hh:mm:ss format
+
+# match a web address
+/(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/
+----
+
+Experiment with your own regular expressions at
+link:https://regexr.com/[]
+
+
+== Exercise
+
+Consider a string containing multiple space separated expressions.  An
+expression is either a single word or a compound expression consisting of
+multiple words between double quotes.
+
+Example input:
+----
+apple orange banana "honey pie" sun "high noon"
+----
+
+Example output:
+----
+all expressions: 6
+compound expressions: 2
+----
+

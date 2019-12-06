@@ -14,7 +14,7 @@ Pick your favorite language(s):
 |Datum  | Thema
 |22. 11.| Algorithmen, grundlegende Begriffe
 |29. 11.| Repräsentation von Daten
-|6. 12. | Statische Datentypen und Datenstrukturen
+|6. 12. | Skalare Datentypen
 |13. 12.| Mensch-Maschine-Interaktion, Betriebssysteme
 |20. 12.| Dynamische Datentypen
 |10. 1. | Sortierungs- und Suchmethoden	

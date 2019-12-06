@@ -153,9 +153,9 @@ The implementations can vary, look at _Regular expressions in Java_, etc.
 
 .Grouping
  Parentheses are used to define the scope and precedence of the operators.
-For example, gray|grey and gr(a|e)y are equivalent patterns which both describe
-the set of "gray" or "grey". Grouping is also used to specify and extract
-specific data within the regex match.
+ For example, gray|grey and gr(a|e)y are equivalent patterns which both describe
+ the set of "gray" or "grey". Grouping is also used to specify and extract
+ specific data within the regex match.
 
 .Quantification
  A quantifier how often the previous element must precede to match.
@@ -195,7 +195,7 @@ Regex `\\d` matches string `\d`, regex `\*\+\+\?` matches string `*++?`
 
 == Regex Examples
 
-Notation: regular expressions are enclosed between two slashes /regex/.
+Notation: example regular expressions are enclosed between two slashes /regex/.
 
 [source,perl]
 ----
@@ -205,7 +205,7 @@ Notation: regular expressions are enclosed between two slashes /regex/.
 /(\d\d):(\d\d):(\d\d)/		# match a date in hh:mm:ss format
 
 # match a web address
-/(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/
+/(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?/
 ----
 
 Experiment with your own regular expressions at

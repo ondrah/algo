@@ -49,6 +49,7 @@ Any of the natural numbers, the negatives of these numbers, or zero.
 
 .IEEE-754 Standard for Floating-Point Arithmetic
   Specifies interchange and arithmetic formats and methods for binary and decimal floating-point arithmetic in computer programming environments.
+ IEEE = Institute of Electrical and Electronics Engineers
 
 image::img/vl03_ieee754_double.png[width="80%"]
 

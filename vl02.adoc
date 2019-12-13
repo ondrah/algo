@@ -1,5 +1,4 @@
 = VL02 Memory and Elementary Types
-Ondřej Havel <ondra.havel@gmail.com>
 29. November
 
 

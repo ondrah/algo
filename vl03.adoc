@@ -43,6 +43,11 @@ Any of the natural numbers, the negatives of these numbers, or zero.
 |  0x7FFFFFFF | 0x7FFFFFFF
 |============================
 
+This representation mechanism is called *Two's Complement*. Sum of a positive number and
+its negative counterpart gives 2^n^ (except zero, n is number of bits). The
+conversion between negative and positive (multiplication with -1) can be done
+very fast as bit negation (ones' complement) and increase by 1.
+
 
 == Double
 
@@ -177,7 +182,7 @@ The implementations can vary, look at _Regular expressions in Java_, etc.
 - `[]` determines a group of characters, `-` interval, `^` is negation
   * `[a-z]` match any character between *a* and *z*
   * `[0123456789]` or `[0-9]` match any decimal digit
-  * `[^A-Z]` match all characters except all between *a* and *z*
+  * `[^A-Z]` match all characters except all between *A* and *Z*
 
 .Implementation
   The environment (programming language, text editor) usually defines some

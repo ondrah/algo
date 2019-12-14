@@ -1,4 +1,4 @@
-= VL04 Scalar Data Types
+= VL04 Operating Systems
 13. December
 
 
@@ -242,7 +242,7 @@ image::img/vl04_vram.png[]
   - Interrupt - timer event, data received/transmitted
   - CPU load, CPU time
     * System load averages is the average number of processes that are 
-    in a runnable state.
+    in a runnable state usually computed for the past 1, 5, and 15 minutes.
   - OS scheduler performs task switching and gives the illusion of
     concurrency.
 

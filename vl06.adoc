@@ -10,7 +10,7 @@
 
 == Randomization
 
-To shuffle an array a of n elements the Fisher-Yates algorithm can be used:
+To shuffle an array a of n elements we use the Fisher-Yates algorithm.
 
 [source,c]
 ----
@@ -103,13 +103,12 @@ image::img/vl06_heap_sort.gif[]
 
 Efficient, general-purpose sorting algorithm.
 
-//image::img/vl06_merge_sort.gif[]
 image::img/vl01_mergesort.png[width="40%"]
 
 
 [source,java]
 ----
-public static int[] intArr = { 9, 8, 1, 2, 3, -10, 11 };
+public static int[] intArr = { 5, 2, 4, 7, 1, 3, 2, 6 };
 
 public int[] sort(int l, int r) {
 	if (l < r) {
@@ -144,7 +143,7 @@ data volumes.
 
 Divide-and-conquer and recursion is used in quicksort.
 
-. Choose a pivot value, typically the middle element
+. Choose a pivot value, typically the middle element, can be a random element.
 . Rearrange elements in such a way, that all elements which are lesser than the pivot go to the left part of the array and all elements greater than the pivot, go to the right part of the array.
 . Recursion: apply the quicksort algorithm to the left and the right parts.
 

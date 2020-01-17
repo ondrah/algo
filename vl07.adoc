@@ -5,6 +5,7 @@
 == Agenda
 
 - Maze Solver
+- Sorting: Reprise
 - Run-Length Encoding
 - LZW Compression
 - Huffman Encoding
@@ -42,6 +43,20 @@
 █       █  █       █
 ███████ █  ███████ █
 ----
+
+== Sorting: Reprise
+
+.Know-how
+- Compare and swap
+- Empty array and single-element array are sorted
+- Idempotence
+
+
+.Specific Algorithms
+- Array merging
+- Priority queue/binary heap
+  * Recursive phase
+  * Linear phase
 
 
 == Run-Length Encoding (RLE)

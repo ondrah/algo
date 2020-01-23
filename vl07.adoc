@@ -66,14 +66,17 @@ of data (sequences in which the same data value occurs in many consecutive data
 elements) are stored as a single data value and count, rather than as the
 original run. 
 
+.Example: RLE-friendly input
 - Example input: AAAAAAAAAABBBBB
 - Example output: 10A5B
 
-
+.Example: RLE-unfriendly input
 - Example input: ABCABCABC
 - Example output: 1A1B1C1A1B1C1A1B1C
 
-image::img/vl07_bitmap.png[]
+
+.A graphical example of input data that compresses efficiently with RLE
+image::img/vl07_bitmap.png[width="25%"]
 
 
 Exercise 0: Write a RLE compressor and de-compressor.
@@ -117,8 +120,6 @@ if(w != "")
 
 Example input: abcabcabc
 
-
-
 [width="80%",frame="topbot",options="header"]
 |====================================================
 | Extra dictionary entries | Output
@@ -129,6 +130,9 @@ Example input: abcabcabc
 | cab => 260     |    258,
 | bc => 261      |    257,
 |====================================================
+
+
+image::img/vl07_lzw_compress.png[Complete algorithm trace]
 
 
 .Decompression
@@ -162,6 +166,7 @@ while (int c = get_next_compressed_int())
 output($result);
 ----
 
+image::img/vl07_lzw_decompress.png[Complete algorithm trace]
 
 
 == Huffman Encoding
@@ -211,11 +216,13 @@ right side.
 [width="80%",frame="topbot",options="header"]
 |====================================================
 | Occurence | Character | Binary Code
-|1x | 'a' | 10
-|1x | 'b' | 11
-|1x | 'c' | 00
-|1x | 'd' | 01
+|1x | 'a' | 00
+|1x | 'b' | 01
+|1x | 'c' | 10
+|1x | 'd' | 11
 |====================================================
+
+image::img/vl07_huffman_abcd.png[]
 
 
 .Example input "aaabcd"
@@ -224,36 +231,11 @@ right side.
 |====================================================
 | Occurence | Character | Binary Code
 |3x | 'a' | 0
-|1x | 'b' | 10
-|1x | 'c' | 110
-|1x | 'd' | 111
+|1x | 'b' | 11
+|1x | 'c' | 100
+|1x | 'd' | 101
 |====================================================
 
 
+image::img/vl07_huffman_aaabcd.png[]
 
-== Exercise 1: Tic Tac Toe
-
-Write a simple player algorithm for the tic-tac-toe game!
-The playground is represented by a two-dimensional array.
-Consider also larger playgrounds (99x99) and `nr_winning = 5`.
-
-image::img/vl07_tictactoe.png[width="30%"]
-
-[source,java]
-----
-/**
- * The function performs one tic-tac-toe turn on provided playground.
- * The turn is performed by writing player_id at empty field on the
- * playground. Empty field is represented by a space character. 
- *
- * @param player_id   Player identification, a non-space character.
- *                    This argument is constant within one game.
- * @param nr_winning  Number of consecutive marks required to win.
- *                    This argument is constant within one game.
- * @param playground  Input/output structure containing the game.
- *                    Only empty fields can be used for the turn.
- */
-void play(char player_id, int nr_winning, char[][] playground) {
-
-}
-----

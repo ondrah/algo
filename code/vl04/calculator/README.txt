@@ -1,4 +1,4 @@
-This is a C# project that was created with Visual Studio 2017.
+This is a C# project created with Visual Studio 2017.
 
 The actual code can be found in
 

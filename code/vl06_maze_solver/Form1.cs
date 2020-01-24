@@ -25,7 +25,7 @@ namespace maze
         bool flMarkWay;
 
         int[] startCoord = new int[2];
-        int[] finishCoord = new int[2];
+        int[] finishCoord = new int[2] { 16, 16 };
 
         private static Random rng = new Random();
 
@@ -59,12 +59,12 @@ namespace maze
 
             Shuffle(directions);
 
-            foreach(Tuple<int,int> direction in directions)
+            foreach (Tuple<int, int> direction in directions)
             {
                 int newX = x + direction.Item1;
                 int newY = y + direction.Item2;
 
-                if(newX >= 0 && newX <= MaxX
+                if (newX >= 0 && newX <= MaxX
                     && newY >= 0 && newY <= MaxY
                     && playground[newX, newY].IsBrick)
                 {
@@ -74,20 +74,31 @@ namespace maze
             }
         }
 
-        private int walk_solve(int distance, int x, int y)
+        /// <summary>
+        /// Walk through a maze recursively.
+        /// </summary>
+        /// <param name="x">x coordinate</param>
+        /// <param name="y">y coordinate</param>
+        /// <returns>true is the field is a part of path between start and finish</returns>
+        private bool walk_solve(int x, int y)
         {
             if (x == finishCoord[0] && y == finishCoord[1])
-                return 1;
+                return true;
 
             if (!playground[x, y].IsFreeWay)
-                return 0;
+                return false;
 
+            // mark this field as speculation (do not go here anymore in recursive walk_solve calls)
             playground[x, y].Speculate();
 
             List<Tuple<int, int>> directions = new List<Tuple<int, int>>() {
-                new Tuple<int, int>(1, 0), new Tuple<int, int>(-1, 0), new Tuple<int, int>(0, 1), new Tuple<int, int>(0, -1) };
+                new Tuple<int, int>(1, 0), // right
+                new Tuple<int, int>(-1, 0), // left
+                new Tuple<int, int>(0, 1), // down
+                new Tuple<int, int>(0, -1) // up
+            };
 
-            int ret = 0;
+            bool isSolution = false;
 
             foreach (Tuple<int, int> direction in directions)
             {
@@ -96,22 +107,27 @@ namespace maze
 
                 if (newX >= 0 && newX <= MaxX
                     && newY >= 0 && newY <= MaxY
-                    && playground[newX, newY].IsFreeWay)
+                    && (playground[newX, newY].IsFreeWay
+                    || playground[newX, newY].IsSolution))
                 {
-                    ret += walk_solve(distance + 1, newX, newY);
+                    // if the new field is a solution, there is no need to go there
+                    if (playground[newX, newY].IsSolution || walk_solve(newX, newY))
+                    {
+                        isSolution = true;
+                    }
                 }
             }
 
-            if(ret > 0)
+            if(isSolution)
             {
-                playground[x, y].MarkSolution(distance);
+                playground[x, y].IsSolution = true;
             }
             else
             {
                 playground[x, y].Unspeculate();
             }
 
-            return ret;
+            return isSolution;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -147,7 +163,7 @@ namespace maze
             if (playground == null)
                 return;
 
-            for(int y = 0; y <= MaxY; y++)
+            for (int y = 0; y <= MaxY; y++)
             {
                 for (int x = 0; x <= MaxX; x++)
                 {
@@ -166,12 +182,12 @@ namespace maze
                         e.Graphics.FillRectangle(Brushes.White, x * CELL_X, y * CELL_Y, CELL_X, CELL_Y);
                     }
 
-                    if(x == startCoord[0] && y == startCoord[1])
+                    if (x == startCoord[0] && y == startCoord[1])
                     {
                         e.Graphics.DrawString("S", defaultFont, drawBrush, x * CELL_X, y * CELL_Y);
                     }
 
-                    if(x == finishCoord[0] && y == finishCoord[1])
+                    if (x == finishCoord[0] && y == finishCoord[1])
                     {
                         e.Graphics.DrawString("F", defaultFont, drawBrush, x * CELL_X, y * CELL_Y);
                     }
@@ -198,7 +214,7 @@ namespace maze
 
         private void button4_Click(object sender, EventArgs e)
         {
-            walk_solve(0, startCoord[0], startCoord[1]);
+            walk_solve(startCoord[0], startCoord[1]);
             panel1.Invalidate();
         }
 
@@ -233,7 +249,7 @@ namespace maze
                 panel1.Invalidate();
             }
 
-            if(flMarkWay)
+            if (flMarkWay)
             {
                 flMarkWay = false;
                 playground[x, y].SetContent(' ');
@@ -252,44 +268,83 @@ namespace maze
             flMarkWay = true;
             flMarkBrick = false;
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            for (int y = 0; y <= MaxY; y++)
+            {
+                for (int x = 0; x <= MaxX; x++)
+                {
+                    if (!playground[x, y].IsBrick)
+                    {
+                        playground[x, y].Reset();
+                    }
+                }
+            }
+            panel1.Invalidate();
+        }
     }
 
     public class Tile
     {
         char content;
 
+        /// <summary>
+        /// Is it a brick?
+        /// </summary>
         public bool IsBrick => content.Equals('#');
 
+        /// <summary>
+        /// Is it a free path?
+        /// </summary>
         public bool IsFreeWay => content.Equals(' ');
 
+        /// <summary>
+        /// Initialize a new tile with given content.
+        /// </summary>
+        /// <param name="_type"></param>
         public Tile(char _type)
         {
             content = _type;
         }
 
+        /// <summary>
+        /// Dig a way.
+        /// </summary>
         public void Dig()
         {
             content = ' ';
         }
 
+        /// <summary>
+        /// Mark field as speculation.
+        /// </summary>
         public void Speculate()
         {
-            content = 's';
+            content = '?';
         }
 
+        /// <summary>
+        /// Restore speculation to a free path.
+        /// </summary>
         public void Unspeculate()
         {
             content = ' ';
         }
 
-        int solution_distance = -1;
+        /// <summary>
+        /// Indicates whether the path field is a possible solution or not.
+        /// </summary>
+        public bool IsSolution { get; set; }
 
-        public void MarkSolution(int distance)
+        /// <summary>
+        /// Reset a path field.
+        /// </summary>
+        public void Reset()
         {
-            solution_distance = distance;
+            IsSolution = false;
+            content = ' ';
         }
-
-        public bool IsSolution => solution_distance > -1;
 
         public void SetContent(char nc)
         {

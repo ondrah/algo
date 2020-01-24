@@ -4,12 +4,32 @@
 
 == Agenda
 
+- Digital Communication
 - Data Integrity
 - Hash Algorithm
 - Digital Signature
 - Data Serialization
 - Probeklausur
 
+
+== Digital Communication
+
+.Example: Serial Communication
+
+Electronic transmission of information that has been encoded digitally.
+Transferring data from one place to another. It is done by physical path or
+physical connection. In digital communication, digital values are taken as the
+discrete set.
+
+image::img/vl08_communication.png[]
+
+- communication speed: 9600 bps (bits per second, baud)
+- 1 bit duration (@9600 baud) = appx. 104 us
+- bit order: LSB to MSB
+- parity: none, odd, even
+- stop bit length: 1, 1.5, 2
+
+How long does it take for one byte?
 
 == Data Integrity
 

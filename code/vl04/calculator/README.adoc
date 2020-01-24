@@ -6,3 +6,5 @@ Expression.cs  expression evaluation class
 Form1.cs       GUI interface code
 
 Other files were generated (semi-)automatically by the VS2017 environment.
+
+image::screenshot.png[]

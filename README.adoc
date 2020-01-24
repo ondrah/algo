@@ -1,6 +1,9 @@
 Datenstrukturen, Algorithmen und Komplexitätstheorie
 ====================================================
 
+Seach for your favorite algorithm at
+link:http://rosettacode.org/wiki/Rosetta_Code[Rosetta Code]
+
 Pick your favorite language(s):
 
 - link:https://beginnersbook.com/java-tutorial-for-beginners-with-examples/[Java Tutorial]

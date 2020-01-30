@@ -14,12 +14,13 @@
 
 == Digital Communication
 
-.Example: Serial Communication
-
 Electronic transmission of information that has been encoded digitally.
 Transferring data from one place to another. It is done by physical path or
 physical connection. In digital communication, digital values are taken as the
 discrete set.
+
+
+.Example: Serial Communication
 
 image::img/vl08_communication.png[]
 

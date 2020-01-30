@@ -23,10 +23,7 @@ Pick your favorite language(s):
 | 6      |10. 1. | Sortierungs- und Suchmethoden	
 | 7      |17. 1. | Transformationen von Daten	
 | 8      |24. 1. | Daten als Kommunikationsmittel
-| 9      |31. 1. | Parallele Algorithmen
-| 10     |7. 2.  | Monte Carlo und genetische Algorithmen
-| 11     |14. 2. |
-| 12     |21. 2. |
-| 13     |28. 2. |
+| 9      |31. 1. | Konkurrenz in Algorithmen
+| 10     |7. 2.  | Genetische Algorithmen
 |===================================================
 

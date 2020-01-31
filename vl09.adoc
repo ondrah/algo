@@ -78,7 +78,7 @@ a process/application.
 
 .Elementary Operations
 
-- Thread creation and abortion (owner/parent)
+- Thread creation and abortion, exit-synchronization (owner/parent)
 - Thread exit, sleep and wake (intra-thread)
 
 When the application starts it is represented by a single thread. As long as
@@ -125,6 +125,12 @@ Java counterpart: synchronized
 Atomic operations are uninterruptible, thread-switching can happen just before
 or just after them. The programming environment defines which operations are
 atomic. If unsure, always use synchronization.
+
+
+.Problems
+
+- Missing synchronization -> *can lead* to data corruption
+- Wrong synchronization -> *can lead* to a deadlock
 
 [source,c]
 ----

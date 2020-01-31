@@ -1,0 +1,20 @@
+# run this file with gnuplot
+
+set terminal pdf
+set output 'rendezvous.pdf'
+
+#set terminal png
+#set output 'rendezvous.png'
+
+set xlabel "repetitions"
+set ylabel "success rate estimation"
+
+set autoscale
+
+set title "rendezvous in 1 h, wait time 20 m"
+set grid
+
+set style data linespoints
+set logscale x
+
+plot "rr_results.txt" using 1:2 title "C simulation" lw 3

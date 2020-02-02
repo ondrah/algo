@@ -1,18 +1,67 @@
-1. TODO
+1.
 
-2. TODO
+In einem rekursiven Algorithmus ruft sich eine Methode selbst wieder auf. Das
+Grundprinzip ist dabei das Zurückführen der Aufgabe auf eine einfachere Aufgaben
+derselben Klasse. Notwending ist eine Abbruchbedingung, welche die Terminierung
+gewährleistet.
+
+Beipiel: Fakultätsberechnung
+
+int fakBer(int n) {
+    if(n <= 0)     // Abbruchbedingung
+        return 1;
+    
+    return n * fakBer(n - 1);  // rekursiver Vorgang
+}
+
+
+2.
+passau
+
+p 1x
+a 2x
+s 2x
+u 1x
+
+p1, a2, s2, u1
+
+a2, s2, p1, u1
+
+a2, s2, (p1, u1)2
+
+a2, (s2, (p1, u1)2)4
+
+(a2, (s2, (p1, u1)2)4)6
+
+
+         /\
+        /  \
+       a   /\
+          /  \
+         s   /\
+            /  \
+           p    u
+
+a .. 0
+s .. 10
+p .. 110
+u .. 111
+
+
+passau .. 110010100111
+
 
 3.
 
 int mightyFunctionDyn(int n) {
-	int ret = 1;
+    int ret = 1;
 
-	while(n > 0) {
-		ret = ret * n;
-		n = n - 2;
-	}
+    while(n > 0) {
+        ret = ret * n;
+        n = n - 2;
+    }
 
-	return ret;
+    return ret;
 }
 
 4.
@@ -21,16 +70,16 @@ O(n), siehe (1)
 
 
 int get_secondLargest(int a[], int a_length) {
-	int max = INT_MIN, max2 = INT_MIN;
+    int max = INT_MIN, max2 = INT_MIN;
 
-	for(int i = 0 ; i < a_length ; i++) {	// (1)
-		if(a[i] > max) {
-			max2 = max;
-			max = a[i];
-		} else if(a[i] > max2) {
-			max2 = a[i];
-		}
-	}
+    for(int i = 0 ; i < a_length ; i++) {   // (1)
+        if(a[i] > max) {
+            max2 = max;
+            max = a[i];
+        } else if(a[i] > max2) {
+            max2 = a[i];
+        }
+    }
 
-	return max2;
+    return max2;
 }

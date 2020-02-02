@@ -1,0 +1,733 @@
+iteration = 0
+$VAR1 = [
+          {
+            'fitness' => 9,
+            'code' => 47459
+          },
+          {
+            'fitness' => 8,
+            'code' => 59202
+          },
+          {
+            'code' => 46946
+          },
+          {
+            'code' => 47427
+          }
+        ];
+iteration = 1
+$VAR1 = [
+          {
+            'fitness' => 9,
+            'code' => 47459
+          },
+          {
+            'code' => 46946,
+            'fitness' => 9
+          },
+          {
+            'code' => 46946
+          },
+          {
+            'code' => 39267
+          }
+        ];
+iteration = 2
+$VAR1 = [
+          {
+            'fitness' => 9,
+            'code' => 47459
+          },
+          {
+            'code' => 46946,
+            'fitness' => 9
+          },
+          {
+            'code' => 46946
+          },
+          {
+            'code' => 39267
+          }
+        ];
+iteration = 3
+$VAR1 = [
+          {
+            'fitness' => 9,
+            'code' => 47459
+          },
+          {
+            'code' => 46946,
+            'fitness' => 9
+          },
+          {
+            'code' => 46946
+          },
+          {
+            'code' => 63843
+          }
+        ];
+iteration = 4
+$VAR1 = [
+          {
+            'fitness' => 10,
+            'code' => 63843
+          },
+          {
+            'fitness' => 9,
+            'code' => 47459
+          },
+          {
+            'code' => 63843
+          },
+          {
+            'code' => 61795
+          }
+        ];
+iteration = 5
+$VAR1 = [
+          {
+            'fitness' => 10,
+            'code' => 63843
+          },
+          {
+            'fitness' => 10,
+            'code' => 63843
+          },
+          {
+            'code' => 63843
+          },
+          {
+            'code' => 63779
+          }
+        ];
+iteration = 6
+$VAR1 = [
+          {
+            'fitness' => 10,
+            'code' => 63843
+          },
+          {
+            'fitness' => 10,
+            'code' => 63843
+          },
+          {
+            'code' => 63843
+          },
+          {
+            'code' => 63811
+          }
+        ];
+iteration = 7
+$VAR1 = [
+          {
+            'fitness' => 10,
+            'code' => 63843
+          },
+          {
+            'fitness' => 10,
+            'code' => 63843
+          },
+          {
+            'code' => 63843
+          },
+          {
+            'code' => 64867
+          }
+        ];
+iteration = 8
+$VAR1 = [
+          {
+            'code' => 64867,
+            'fitness' => 11
+          },
+          {
+            'fitness' => 10,
+            'code' => 63843
+          },
+          {
+            'code' => 63843
+          },
+          {
+            'code' => 65379
+          }
+        ];
+iteration = 9
+$VAR1 = [
+          {
+            'fitness' => 12,
+            'code' => 65379
+          },
+          {
+            'code' => 64867,
+            'fitness' => 11
+          },
+          {
+            'code' => 64867
+          },
+          {
+            'code' => 32611
+          }
+        ];
+iteration = 10
+$VAR1 = [
+          {
+            'fitness' => 12,
+            'code' => 65379
+          },
+          {
+            'code' => 64867,
+            'fitness' => 11
+          },
+          {
+            'code' => 64867
+          },
+          {
+            'code' => 65315
+          }
+        ];
+iteration = 11
+$VAR1 = [
+          {
+            'fitness' => 12,
+            'code' => 65379
+          },
+          {
+            'code' => 64867,
+            'fitness' => 11
+          },
+          {
+            'code' => 64867
+          },
+          {
+            'code' => 65347
+          }
+        ];
+iteration = 12
+$VAR1 = [
+          {
+            'fitness' => 12,
+            'code' => 65379
+          },
+          {
+            'code' => 64867,
+            'fitness' => 11
+          },
+          {
+            'code' => 64867
+          },
+          {
+            'code' => 65507
+          }
+        ];
+iteration = 13
+$VAR1 = [
+          {
+            'code' => 65507,
+            'fitness' => 13
+          },
+          {
+            'fitness' => 12,
+            'code' => 65379
+          },
+          {
+            'code' => 65507
+          },
+          {
+            'code' => 65515
+          }
+        ];
+iteration = 14
+$VAR1 = [
+          {
+            'fitness' => 14,
+            'code' => 65515
+          },
+          {
+            'code' => 65507,
+            'fitness' => 13
+          },
+          {
+            'code' => 65507
+          },
+          {
+            'code' => 65507
+          }
+        ];
+iteration = 15
+$VAR1 = [
+          {
+            'fitness' => 14,
+            'code' => 65515
+          },
+          {
+            'code' => 65507,
+            'fitness' => 13
+          },
+          {
+            'code' => 65507
+          },
+          {
+            'code' => 57323
+          }
+        ];
+iteration = 16
+$VAR1 = [
+          {
+            'fitness' => 14,
+            'code' => 65515
+          },
+          {
+            'code' => 65507,
+            'fitness' => 13
+          },
+          {
+            'code' => 65507
+          },
+          {
+            'code' => 65507
+          }
+        ];
+iteration = 17
+$VAR1 = [
+          {
+            'fitness' => 14,
+            'code' => 65515
+          },
+          {
+            'code' => 65507,
+            'fitness' => 13
+          },
+          {
+            'code' => 65507
+          },
+          {
+            'code' => 64491
+          }
+        ];
+iteration = 18
+$VAR1 = [
+          {
+            'fitness' => 14,
+            'code' => 65515
+          },
+          {
+            'code' => 65507,
+            'fitness' => 13
+          },
+          {
+            'code' => 65507
+          },
+          {
+            'code' => 64491
+          }
+        ];
+iteration = 19
+$VAR1 = [
+          {
+            'fitness' => 14,
+            'code' => 65515
+          },
+          {
+            'code' => 65507,
+            'fitness' => 13
+          },
+          {
+            'code' => 65507
+          },
+          {
+            'code' => 64491
+          }
+        ];
+iteration = 20
+$VAR1 = [
+          {
+            'fitness' => 14,
+            'code' => 65515
+          },
+          {
+            'code' => 65507,
+            'fitness' => 13
+          },
+          {
+            'code' => 65507
+          },
+          {
+            'code' => 65519
+          }
+        ];
+iteration = 21
+$VAR1 = [
+          {
+            'code' => 65519,
+            'fitness' => 15
+          },
+          {
+            'fitness' => 14,
+            'code' => 65515
+          },
+          {
+            'code' => 65515
+          },
+          {
+            'code' => 49135
+          }
+        ];
+iteration = 22
+$VAR1 = [
+          {
+            'code' => 65519,
+            'fitness' => 15
+          },
+          {
+            'fitness' => 14,
+            'code' => 65515
+          },
+          {
+            'code' => 65515
+          },
+          {
+            'code' => 57327
+          }
+        ];
+iteration = 23
+$VAR1 = [
+          {
+            'code' => 65519,
+            'fitness' => 15
+          },
+          {
+            'fitness' => 14,
+            'code' => 65515
+          },
+          {
+            'code' => 65515
+          },
+          {
+            'code' => 32751
+          }
+        ];
+iteration = 24
+$VAR1 = [
+          {
+            'code' => 65519,
+            'fitness' => 15
+          },
+          {
+            'fitness' => 14,
+            'code' => 65515
+          },
+          {
+            'code' => 65515
+          },
+          {
+            'code' => 57327
+          }
+        ];
+iteration = 25
+$VAR1 = [
+          {
+            'code' => 65519,
+            'fitness' => 15
+          },
+          {
+            'fitness' => 14,
+            'code' => 65515
+          },
+          {
+            'code' => 65515
+          },
+          {
+            'code' => 65511
+          }
+        ];
+iteration = 26
+$VAR1 = [
+          {
+            'code' => 65519,
+            'fitness' => 15
+          },
+          {
+            'fitness' => 14,
+            'code' => 65515
+          },
+          {
+            'code' => 65515
+          },
+          {
+            'code' => 65007
+          }
+        ];
+iteration = 27
+$VAR1 = [
+          {
+            'code' => 65519,
+            'fitness' => 15
+          },
+          {
+            'fitness' => 14,
+            'code' => 65515
+          },
+          {
+            'code' => 65515
+          },
+          {
+            'code' => 65007
+          }
+        ];
+iteration = 28
+$VAR1 = [
+          {
+            'code' => 65519,
+            'fitness' => 15
+          },
+          {
+            'fitness' => 14,
+            'code' => 65515
+          },
+          {
+            'code' => 65515
+          },
+          {
+            'code' => 65455
+          }
+        ];
+iteration = 29
+$VAR1 = [
+          {
+            'code' => 65519,
+            'fitness' => 15
+          },
+          {
+            'fitness' => 14,
+            'code' => 65515
+          },
+          {
+            'code' => 65515
+          },
+          {
+            'code' => 65487
+          }
+        ];
+iteration = 30
+$VAR1 = [
+          {
+            'code' => 65519,
+            'fitness' => 15
+          },
+          {
+            'fitness' => 14,
+            'code' => 65515
+          },
+          {
+            'code' => 65515
+          },
+          {
+            'code' => 63471
+          }
+        ];
+iteration = 31
+$VAR1 = [
+          {
+            'code' => 65519,
+            'fitness' => 15
+          },
+          {
+            'fitness' => 14,
+            'code' => 65515
+          },
+          {
+            'code' => 65515
+          },
+          {
+            'code' => 65517
+          }
+        ];
+iteration = 32
+$VAR1 = [
+          {
+            'code' => 65519,
+            'fitness' => 15
+          },
+          {
+            'fitness' => 14,
+            'code' => 65515
+          },
+          {
+            'code' => 65515
+          },
+          {
+            'code' => 65518
+          }
+        ];
+iteration = 33
+$VAR1 = [
+          {
+            'code' => 65519,
+            'fitness' => 15
+          },
+          {
+            'fitness' => 14,
+            'code' => 65515
+          },
+          {
+            'code' => 65515
+          },
+          {
+            'code' => 64495
+          }
+        ];
+iteration = 34
+$VAR1 = [
+          {
+            'code' => 65519,
+            'fitness' => 15
+          },
+          {
+            'fitness' => 14,
+            'code' => 65515
+          },
+          {
+            'code' => 65515
+          },
+          {
+            'code' => 65487
+          }
+        ];
+iteration = 35
+$VAR1 = [
+          {
+            'code' => 65519,
+            'fitness' => 15
+          },
+          {
+            'fitness' => 14,
+            'code' => 65515
+          },
+          {
+            'code' => 65515
+          },
+          {
+            'code' => 65518
+          }
+        ];
+iteration = 36
+$VAR1 = [
+          {
+            'code' => 65519,
+            'fitness' => 15
+          },
+          {
+            'fitness' => 14,
+            'code' => 65515
+          },
+          {
+            'code' => 65515
+          },
+          {
+            'code' => 65391
+          }
+        ];
+iteration = 37
+$VAR1 = [
+          {
+            'code' => 65519,
+            'fitness' => 15
+          },
+          {
+            'fitness' => 14,
+            'code' => 65515
+          },
+          {
+            'code' => 65515
+          },
+          {
+            'code' => 61423
+          }
+        ];
+iteration = 38
+$VAR1 = [
+          {
+            'code' => 65519,
+            'fitness' => 15
+          },
+          {
+            'fitness' => 14,
+            'code' => 65515
+          },
+          {
+            'code' => 65515
+          },
+          {
+            'code' => 65511
+          }
+        ];
+iteration = 39
+$VAR1 = [
+          {
+            'code' => 65519,
+            'fitness' => 15
+          },
+          {
+            'fitness' => 14,
+            'code' => 65515
+          },
+          {
+            'code' => 65515
+          },
+          {
+            'code' => 65263
+          }
+        ];
+iteration = 40
+$VAR1 = [
+          {
+            'code' => 65519,
+            'fitness' => 15
+          },
+          {
+            'fitness' => 14,
+            'code' => 65515
+          },
+          {
+            'code' => 65515
+          },
+          {
+            'code' => 57327
+          }
+        ];
+iteration = 41
+$VAR1 = [
+          {
+            'code' => 65519,
+            'fitness' => 15
+          },
+          {
+            'fitness' => 14,
+            'code' => 65515
+          },
+          {
+            'code' => 65515
+          },
+          {
+            'code' => 65535
+          }
+        ];
+iteration = 42
+$VAR1 = [
+          {
+            'fitness' => 16,
+            'code' => 65535
+          },
+          {
+            'code' => 65519,
+            'fitness' => 15
+          },
+          {
+            'code' => 65535
+          },
+          {
+            'code' => 64511
+          }
+        ];
+iteration = 43
+all done, maximum found

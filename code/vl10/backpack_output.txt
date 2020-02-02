@@ -1,0 +1,348 @@
+Optimizing for capacity 1.44M (1509949 bytes)
+Warning 1 objects were rejected because of large size.
+Processing 161 objects, total size 10.08M.
+Generating one starting candidate...
+Fit: 1 not-fit: 99  best: 0.737444774624838
+1/100 Mutating 99 candidates.
+Fit: 43 not-fit: 57  best: 0.994665382738092
+2/100 Mutating 57 candidates.
+Fit: 45 not-fit: 55  best: 0.994665382738092
+3/100 Mutating 55 candidates.
+Fit: 58 not-fit: 42  best: 0.994665382738092
+Dropping 8 candidates.
+4/100 Mutating 50 candidates.
+Fit: 61 not-fit: 39  best: 0.994665382738092
+Dropping 11 candidates.
+5/100 Mutating 50 candidates.
+Fit: 57 not-fit: 43  best: 0.994665382738092
+Dropping 7 candidates.
+6/100 Mutating 50 candidates.
+Fit: 54 not-fit: 46  best: 0.994665382738092
+Dropping 4 candidates.
+7/100 Mutating 50 candidates.
+Fit: 54 not-fit: 46  best: 0.994665382738092
+Dropping 4 candidates.
+8/100 Mutating 50 candidates.
+Fit: 56 not-fit: 44  best: 0.994665382738092
+Dropping 6 candidates.
+9/100 Mutating 50 candidates.
+Fit: 55 not-fit: 45  best: 0.994665382738092
+Dropping 5 candidates.
+10/100 Mutating 50 candidates.
+Fit: 54 not-fit: 46  best: 0.994665382738092
+Dropping 4 candidates.
+11/100 Mutating 50 candidates.
+Fit: 55 not-fit: 45  best: 0.996615779738256
+Dropping 5 candidates.
+12/100 Mutating 50 candidates.
+Fit: 53 not-fit: 47  best: 0.996615779738256
+Dropping 3 candidates.
+13/100 Mutating 50 candidates.
+Fit: 53 not-fit: 47  best: 0.996615779738256
+Dropping 3 candidates.
+14/100 Mutating 50 candidates.
+Fit: 55 not-fit: 45  best: 0.996615779738256
+Dropping 5 candidates.
+15/100 Mutating 50 candidates.
+Fit: 53 not-fit: 47  best: 0.996615779738256
+Dropping 3 candidates.
+16/100 Mutating 50 candidates.
+Fit: 53 not-fit: 47  best: 0.996615779738256
+Dropping 3 candidates.
+17/100 Mutating 50 candidates.
+Fit: 53 not-fit: 47  best: 0.998174110516315
+Dropping 3 candidates.
+18/100 Mutating 50 candidates.
+Fit: 52 not-fit: 48  best: 0.998174110516315
+Dropping 2 candidates.
+19/100 Mutating 50 candidates.
+Fit: 57 not-fit: 43  best: 0.998174110516315
+Dropping 7 candidates.
+20/100 Mutating 50 candidates.
+Fit: 52 not-fit: 48  best: 0.998174110516315
+Dropping 2 candidates.
+21/100 Mutating 50 candidates.
+Fit: 53 not-fit: 47  best: 0.998174110516315
+Dropping 3 candidates.
+22/100 Mutating 50 candidates.
+Fit: 55 not-fit: 45  best: 0.998174110516315
+Dropping 5 candidates.
+23/100 Mutating 50 candidates.
+Fit: 52 not-fit: 48  best: 0.998174110516315
+Dropping 2 candidates.
+24/100 Mutating 50 candidates.
+Fit: 53 not-fit: 47  best: 0.998174110516315
+Dropping 3 candidates.
+25/100 Mutating 50 candidates.
+Fit: 55 not-fit: 45  best: 0.998174110516315
+Dropping 5 candidates.
+26/100 Mutating 50 candidates.
+Fit: 56 not-fit: 44  best: 0.998174110516315
+Dropping 6 candidates.
+27/100 Mutating 50 candidates.
+Fit: 52 not-fit: 48  best: 0.998174110516315
+Dropping 2 candidates.
+28/100 Mutating 50 candidates.
+Fit: 54 not-fit: 46  best: 0.998174110516315
+Dropping 4 candidates.
+29/100 Mutating 50 candidates.
+Fit: 56 not-fit: 44  best: 0.998174110516315
+Dropping 6 candidates.
+30/100 Mutating 50 candidates.
+Fit: 51 not-fit: 49  best: 0.998174110516315
+Dropping 1 candidates.
+31/100 Mutating 50 candidates.
+Fit: 54 not-fit: 46  best: 0.998174110516315
+Dropping 4 candidates.
+32/100 Mutating 50 candidates.
+Fit: 53 not-fit: 47  best: 0.998174110516315
+Dropping 3 candidates.
+33/100 Mutating 50 candidates.
+Fit: 52 not-fit: 48  best: 0.998174110516315
+Dropping 2 candidates.
+34/100 Mutating 50 candidates.
+Fit: 51 not-fit: 49  best: 0.998174110516315
+Dropping 1 candidates.
+35/100 Mutating 50 candidates.
+Fit: 56 not-fit: 44  best: 0.998174110516315
+Dropping 6 candidates.
+36/100 Mutating 50 candidates.
+Fit: 55 not-fit: 45  best: 0.998174110516315
+Dropping 5 candidates.
+37/100 Mutating 50 candidates.
+Fit: 52 not-fit: 48  best: 0.998174110516315
+Dropping 2 candidates.
+38/100 Mutating 50 candidates.
+Fit: 54 not-fit: 46  best: 0.998174110516315
+Dropping 4 candidates.
+39/100 Mutating 50 candidates.
+Fit: 54 not-fit: 46  best: 0.998174110516315
+Dropping 4 candidates.
+40/100 Mutating 50 candidates.
+Fit: 51 not-fit: 49  best: 0.998174110516315
+Dropping 1 candidates.
+41/100 Mutating 50 candidates.
+Fit: 55 not-fit: 45  best: 0.998174110516315
+Dropping 5 candidates.
+42/100 Mutating 50 candidates.
+Fit: 58 not-fit: 42  best: 0.998174110516315
+Dropping 8 candidates.
+43/100 Mutating 50 candidates.
+Fit: 52 not-fit: 48  best: 0.998174110516315
+Dropping 2 candidates.
+44/100 Mutating 50 candidates.
+Fit: 54 not-fit: 46  best: 0.998174110516315
+Dropping 4 candidates.
+45/100 Mutating 50 candidates.
+Fit: 52 not-fit: 48  best: 0.998174110516315
+Dropping 2 candidates.
+46/100 Mutating 50 candidates.
+Fit: 55 not-fit: 45  best: 0.998174110516315
+Dropping 5 candidates.
+47/100 Mutating 50 candidates.
+Fit: 53 not-fit: 47  best: 0.998174110516315
+Dropping 3 candidates.
+48/100 Mutating 50 candidates.
+Fit: 53 not-fit: 47  best: 0.998174110516315
+Dropping 3 candidates.
+49/100 Mutating 50 candidates.
+Fit: 55 not-fit: 45  best: 0.999113215082099
+Dropping 5 candidates.
+50/100 Mutating 50 candidates.
+Fit: 51 not-fit: 49  best: 0.999113215082099
+Dropping 1 candidates.
+51/100 Mutating 50 candidates.
+Fit: 58 not-fit: 42  best: 0.999113215082099
+Dropping 8 candidates.
+52/100 Mutating 50 candidates.
+Fit: 51 not-fit: 49  best: 0.999113215082099
+Dropping 1 candidates.
+53/100 Mutating 50 candidates.
+Fit: 53 not-fit: 47  best: 0.999113215082099
+Dropping 3 candidates.
+54/100 Mutating 50 candidates.
+Fit: 53 not-fit: 47  best: 0.999113215082099
+Dropping 3 candidates.
+55/100 Mutating 50 candidates.
+Fit: 53 not-fit: 47  best: 0.999113215082099
+Dropping 3 candidates.
+56/100 Mutating 50 candidates.
+Fit: 55 not-fit: 45  best: 0.999113215082099
+Dropping 5 candidates.
+57/100 Mutating 50 candidates.
+Fit: 54 not-fit: 46  best: 0.999113215082099
+Dropping 4 candidates.
+58/100 Mutating 50 candidates.
+Fit: 52 not-fit: 48  best: 0.999113215082099
+Dropping 2 candidates.
+59/100 Mutating 50 candidates.
+Fit: 55 not-fit: 45  best: 0.999594026023396
+Dropping 5 candidates.
+60/100 Mutating 50 candidates.
+Fit: 58 not-fit: 42  best: 0.999594026023396
+Dropping 8 candidates.
+61/100 Mutating 50 candidates.
+Fit: 53 not-fit: 47  best: 0.999594026023396
+Dropping 3 candidates.
+62/100 Mutating 50 candidates.
+Fit: 53 not-fit: 47  best: 0.999594026023396
+Dropping 3 candidates.
+63/100 Mutating 50 candidates.
+Fit: 53 not-fit: 47  best: 0.999594026023396
+Dropping 3 candidates.
+64/100 Mutating 50 candidates.
+Fit: 54 not-fit: 46  best: 0.999594026023396
+Dropping 4 candidates.
+65/100 Mutating 50 candidates.
+Fit: 52 not-fit: 48  best: 0.999594026023396
+Dropping 2 candidates.
+66/100 Mutating 50 candidates.
+Fit: 53 not-fit: 47  best: 0.999594026023396
+Dropping 3 candidates.
+67/100 Mutating 50 candidates.
+Fit: 54 not-fit: 46  best: 0.999594026023396
+Dropping 4 candidates.
+68/100 Mutating 50 candidates.
+Fit: 55 not-fit: 45  best: 0.999594026023396
+Dropping 5 candidates.
+69/100 Mutating 50 candidates.
+Fit: 54 not-fit: 46  best: 0.999594026023396
+Dropping 4 candidates.
+70/100 Mutating 50 candidates.
+Fit: 55 not-fit: 45  best: 0.999594026023396
+Dropping 5 candidates.
+71/100 Mutating 50 candidates.
+Fit: 50 not-fit: 50  best: 0.999594026023396
+72/100 Mutating 50 candidates.
+Fit: 52 not-fit: 48  best: 0.999594026023396
+Dropping 2 candidates.
+73/100 Mutating 50 candidates.
+Fit: 53 not-fit: 47  best: 0.999594026023396
+Dropping 3 candidates.
+74/100 Mutating 50 candidates.
+Fit: 58 not-fit: 42  best: 0.999594026023396
+Dropping 8 candidates.
+75/100 Mutating 50 candidates.
+Fit: 52 not-fit: 48  best: 0.999594026023396
+Dropping 2 candidates.
+76/100 Mutating 50 candidates.
+Fit: 51 not-fit: 49  best: 0.999594026023396
+Dropping 1 candidates.
+77/100 Mutating 50 candidates.
+Fit: 54 not-fit: 46  best: 0.999594026023396
+Dropping 4 candidates.
+78/100 Mutating 50 candidates.
+Fit: 54 not-fit: 46  best: 0.999594026023396
+Dropping 4 candidates.
+79/100 Mutating 50 candidates.
+Fit: 56 not-fit: 44  best: 0.999594026023396
+Dropping 6 candidates.
+80/100 Mutating 50 candidates.
+Fit: 52 not-fit: 48  best: 0.999594026023396
+Dropping 2 candidates.
+81/100 Mutating 50 candidates.
+Fit: 53 not-fit: 47  best: 0.999594026023396
+Dropping 3 candidates.
+82/100 Mutating 50 candidates.
+Fit: 54 not-fit: 46  best: 0.999594026023396
+Dropping 4 candidates.
+83/100 Mutating 50 candidates.
+Fit: 55 not-fit: 45  best: 0.999594026023396
+Dropping 5 candidates.
+84/100 Mutating 50 candidates.
+Fit: 52 not-fit: 48  best: 0.999594026023396
+Dropping 2 candidates.
+85/100 Mutating 50 candidates.
+Fit: 56 not-fit: 44  best: 0.999594026023396
+Dropping 6 candidates.
+86/100 Mutating 50 candidates.
+Fit: 57 not-fit: 43  best: 0.999594026023396
+Dropping 7 candidates.
+87/100 Mutating 50 candidates.
+Fit: 53 not-fit: 47  best: 0.999594026023396
+Dropping 3 candidates.
+88/100 Mutating 50 candidates.
+Fit: 53 not-fit: 47  best: 0.999594026023396
+Dropping 3 candidates.
+89/100 Mutating 50 candidates.
+Fit: 52 not-fit: 48  best: 0.999594026023396
+Dropping 2 candidates.
+90/100 Mutating 50 candidates.
+Fit: 53 not-fit: 47  best: 0.999981456327333
+Dropping 3 candidates.
+91/100 Mutating 50 candidates.
+Fit: 56 not-fit: 44  best: 0.999981456327333
+Dropping 6 candidates.
+92/100 Mutating 50 candidates.
+Fit: 55 not-fit: 45  best: 0.999981456327333
+Dropping 5 candidates.
+93/100 Mutating 50 candidates.
+Fit: 54 not-fit: 46  best: 0.999981456327333
+Dropping 4 candidates.
+94/100 Mutating 50 candidates.
+Fit: 56 not-fit: 44  best: 0.999981456327333
+Dropping 6 candidates.
+95/100 Mutating 50 candidates.
+Fit: 50 not-fit: 50  best: 0.999981456327333
+96/100 Mutating 50 candidates.
+Fit: 55 not-fit: 45  best: 0.999981456327333
+Dropping 5 candidates.
+97/100 Mutating 50 candidates.
+Fit: 53 not-fit: 47  best: 0.999981456327333
+Dropping 3 candidates.
+98/100 Mutating 50 candidates.
+Fit: 51 not-fit: 49  best: 0.999981456327333
+Dropping 1 candidates.
+99/100 Mutating 50 candidates.
+Fit: 52 not-fit: 48  best: 0.999981456327333
+Dropping 2 candidates.
+100/100 Mutating 50 candidates.
+/bin/bunzip2
+/bin/bzcat
+/bin/bzexe
+/bin/bzfgrep
+/bin/bzgrep
+/bin/bzip2
+/bin/bzip2recover
+/bin/bzmore
+/bin/cp
+/bin/date
+/bin/dnsdomainname
+/bin/domainname
+/bin/echo
+/bin/fgconsole
+/bin/fgrep
+/bin/findmnt
+/bin/lessfile
+/bin/lesspipe
+/bin/loadkeys
+/bin/lsblk
+/bin/mkdir
+/bin/mknod
+/bin/more
+/bin/ntfscat
+/bin/ntfsls
+/bin/ntfsmove
+/bin/open
+/bin/pidof
+/bin/ping4
+/bin/ps
+/bin/readlink
+/bin/red
+/bin/rmdir
+/bin/sh.distrib
+/bin/su
+/bin/sync
+/bin/systemd
+/bin/systemd-sysusers
+/bin/true
+/bin/uname
+/bin/whiptail
+/bin/zcat
+/bin/zegrep
+/bin/zfgrep
+/bin/zgrep
+/bin/znew
+1509921/1509949 (100.00%, 28 bytes left)
+Elapsed time: 2 seconds
+

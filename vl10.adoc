@@ -1,0 +1,112 @@
+= VL10 Randomized Algorithms
+7. February
+
+
+== Agenda
+
+- Las Vegas and Monte Carlo
+- Genetic Algorithms (GA)
+
+
+== Las Vegas and Monte Carlo
+
+- *Las Vegas* are randomized algorithms that always give the correct result but
+  can be very resource-intensive.
+
+- *Monte Carlo* is a class of randomized algorithms that use repeated sampling to
+  approximate the exact solution.
+
+
+[source,c]
+----
+/* Las Vegas algorithm */
+while(true) {
+
+    k = RandomInteger(a.length);
+
+    if ( a[k] == 1 )
+        return k;
+}
+
+
+/* Monte Carlo algorithm */
+nr_samples = 500;
+
+while(nr_samples > 0) {
+
+    k = RandomInteger(a.length);
+
+    if ( a[k] == 1 )
+        return k;
+
+    nr_samples--;
+}
+
+throw new Exception("Algorithm failed!");
+----
+
+
+== Genetic Algorithms
+
+- Class of evolutionary algorithms that uses techniques inspired by evolutionary
+  biology such as inheritance, recombination, mutation, and selection
+
+. The evolution starts with a population of randomly generated individuals.
+The result of this step is called *generation*.
+
+. *Fitness* of each individual is computed and evaluated. If desired fitness is
+reached, the algorithm terminates.
+
+. Regarding to their fitness, multiple individuals are selected to form a new
+generation. New individuals are created using recombination and mutation.
+
+. Go to 2
+
+
+.Population 
+
+- Chromosome is the basic descriptive data element of an individual, usually
+  stored as vector data
+  * binary number
+  * array of integers, letters, etc.
+
+- Every chromosome represents a single solution candidate for the problem.
+
+
+.Fitness
+
+- The fitness function quantifies the 'goodness' of a chromosome, it's the
+  target function that gets optimized.
+
+
+.Selection
+
+- Arbitrary
+- Ranking
+- Tournament
+- Roulette wheel
+
+
+.Recombination, Mutation
+
+- Recombination takes typically two chromosomes and produces a new chromosome.
+  * Systematically
+  * Or in any different manner
+
+- Mutation is operation that randomly changes information of a chromosome.
+  * Useful to escape from local maximum
+
+
+== Example: Bit Count
+
+Maximize the number of non-zero bits in a word (16 bit integer value).
+
+
+
+== Example: The Backpack Problem
+
+Find a subset of objects that fit into a backpack with given capacity.
+
+
+
+

@@ -24,6 +24,6 @@ Pick your favorite language(s):
 | 7      |17. 1. | Transformationen von Daten	
 | 8      |24. 1. | Daten als Kommunikationsmittel
 | 9      |31. 1. | Konkurrenz in Algorithmen
-| 10     |7. 2.  | Genetische Algorithmen
+| 10     |7. 2.  | Randomisierte Algorithmen
 |===================================================
 

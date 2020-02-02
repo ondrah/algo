@@ -1,0 +1,161 @@
+748968 brltty
+584072 udevadm
+554104 ip
+423312 tar
+245872 nano
+219456 grep
+211528 loadkeys
+196632 hciconfig
+182352 systemctl
+170760 less
+170520 dumpkeys
+157224 cpio
+154192 netstat
+149688 kmod
+146128 ntfs-3g
+141528 cp
+139904 ss
+137440 mv
+133792 vdir
+133792 ls
+133792 dir
+133432 ps
+121432 dash
+116840 ntfsrecover
+113504 bash
+109232 lowntfs-3g
+109000 sed
+101560 gzip
+100568 date
+ 88672 ntfssecaudit
+ 88280 touch
+ 84776 df
+ 84328 systemd-hwdb
+ 84048 lsblk
+ 80512 mt-gnu
+ 80056 mkdir
+ 76000 dd
+ 75992 stty
+ 72000 dmesg
+ 71752 systemd-tmpfiles
+ 67808 ln
+ 67768 mknod
+ 67768 chown
+ 64784 findmnt
+ 64424 ping
+ 63704 rm
+ 63672 chgrp
+ 63576 journalctl
+ 59608 chmod
+ 55416 ntfsinfo
+ 52664 login
+ 51512 ed
+ 51280 loginctl
+ 47752 ntfswipe
+ 44664 su
+ 43192 rmdir
+ 43192 readlink
+ 43192 mktemp
+ 43144 setfont
+ 43120 ntfsfix
+ 43088 mount
+ 43080 systemd-sysusers
+ 43080 networkctl
+ 39103 setupcon
+ 38952 more
+ 38944 ntfstruncate
+ 38904 plymouth
+ 35928 fuser
+ 35512 setfacl
+ 35312 nc.openbsd
+ 35064 cat
+ 35032 uname
+ 35000 sync
+ 35000 sleep
+ 35000 pwd
+ 35000 echo
+ 34928 ntfsfallocate
+ 34920 ntfscmp
+ 34920 ntfscluster
+ 34888 bzip2
+ 34888 bzcat
+ 34888 bunzip2
+ 31928 ntfsls
+ 30904 true
+ 30904 false
+ 30824 ntfsmove
+ 30800 wdctl
+ 30800 fusermount
+ 30792 keyctl
+ 30744 ntfsusermap
+ 26728 ntfscat
+ 26704 kill
+ 26696 umount
+ 26696 systemd-tty-ask-password-agent
+ 26632 whiptail
+ 23160 getfacl
+ 19856 lesskey
+ 18872 openvt
+ 18760 run-parts
+ 18504 hostname
+ 18496 systemd-machine-id-setup
+ 14416 systemd-inhibit
+ 14408 systemd-notify
+ 14408 mountpoint
+ 14400 systemd-escape
+ 14328 ulockmgr_server
+ 14328 chacl
+ 14328 bzip2recover
+ 10320 systemd-ask-password
+ 10312 ntfs-3g.probe
+ 10312 kbd_mode
+ 10312 fgconsole
+ 10312 chvt
+ 10256 lessecho
+ 10104 tempfile
+  8564 lesspipe
+  5938 zgrep
+  5927 gzexe
+  5764 zdiff
+  5047 znew
+  4877 bzexe
+  3642 bzgrep
+  2762 unicode_start
+  2301 uncompress
+  2301 gunzip
+  2140 bzdiff
+  2131 zforce
+  2037 zless
+  1937 zcat
+  1910 zmore
+  1777 zcmp
+  1297 bzmore
+   946 which
+   140 zfgrep
+   140 zegrep
+    89 red
+    28 fgrep
+    28 egrep
+    24 netcat 
+    20 systemd 
+    20 nc 
+    20 mt 
+    14 pidof 
+     8 ypdomainname 
+     8 nisdomainname 
+     8 lessfile 
+     8 domainname 
+     8 dnsdomainname 
+     7 static-sh 
+     6 open 
+     6 bzless 
+     6 bzfgrep 
+     6 bzegrep 
+     6 bzcmp 
+     4 sh.distrib 
+     4 sh 
+     4 rnano 
+     4 rbash 
+     4 ping6 
+     4 ping4 
+     4 lsmod 

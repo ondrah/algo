@@ -1,0 +1,201 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+use Getopt::Long;
+
+use Storable qw/dclone/;
+use constant MAX_IT => 100;
+
+my $units;
+
+sub get_real_cap {
+    $_ = shift;
+
+    die "Invalid capacity format '$_'" if ( !/^(\d+(?:\.\d*)?)([kmgKMG]?)/ );
+    my $cap = $1;
+    $units = uc $2;
+    return int $cap * 1024               if $units eq 'K';
+    return int $cap * 1024 * 1024        if $units eq 'M';
+    return int $cap * 1024 * 1024 * 1024 if $units eq 'G';
+}
+
+sub get_human_size {
+    $_ = shift;
+
+    $_ = sprintf( "%.2f", $_ / 1024 ) if $units eq 'K';
+    $_ = sprintf( "%.2f", $_ / ( 1024 * 1024 ) )        if $units eq 'M';
+    $_ = sprintf( "%.2f", $_ / ( 1024 * 1024 * 1024 ) ) if $units eq 'G';
+
+    return $_ . $units;
+}
+
+#my $my_cap = "4485M";
+my $my_cap = "1.44M";
+my ( $start_time, $end_time );
+
+my @ftable;
+my $nr_files = 0;
+my $nr_combinations;
+my $nr_large   = 0;    # Objects that are larger than media
+my $total_size = 0;
+my $fl_all     = 0;
+
+my ( $dumpf, $best_req );
+my $max_iter = MAX_IT;
+$start_time = time;
+
+my $real_cap = get_real_cap $my_cap;
+print STDERR "Optimizing for capacity $my_cap ($real_cap bytes)\n";
+
+for (@ARGV) {
+    next if /^\.\.?$/;
+    next if !-e $_;
+    s/`/\\`/g;
+    my $s = `du -sb "$_"`;
+    chomp $s;
+    $s =~ s/^(\d+).*/$1/;
+    if ( $s > $real_cap ) {
+        $nr_large++;
+        next;
+    }
+    push( @ftable, { name => $_, size => $s } );
+    $total_size += $s;
+    $nr_files++;
+}
+
+print STDERR "Warning $nr_large objects were rejected because of large size.\n"
+  if $nr_large;
+if ( !$nr_files ) {
+    print STDERR "Nothing to do\n";
+    exit 0;
+}
+print STDERR
+  "Processing $nr_files objects, total size @{[ get_human_size $total_size
+]}.\n";
+
+if ( $total_size <= $real_cap ) {
+    print STDERR "Nothing to do media capacity not exceeded.\n";
+    print "${$_}{'name'}\n" for (@ftable);
+    exit 0;
+}
+
+sub gen_mutate {
+    my ($data) = @_;
+
+    for ( my $i = 0 ; $i < int( @{$data} * 0.05 ) + 1 ; $i++ ) {
+        $data->[ int( rand( @{$data} ) ) ] = 1;
+    }
+
+    for ( my $i = 0 ; $i < int( @{$data} * 0.05 ) + 1 ; $i++ ) {
+        $data->[ int( rand( @{$data} ) ) ] = 0;
+    }
+}
+
+sub gen_combine {
+    my ($ret) = @_;
+    my $df;
+
+    open $df, ">", $dumpf if $dumpf;
+
+    print STDERR "Generating one starting candidate...\n";
+    my @genpool;
+
+    for ( my $c = 0 ; $c < 100 ; $c++ ) {
+        $genpool[$c]->{'data'} = [ (0) x @ftable ];
+    }
+    $genpool[0]->{'data'}->[0] = 1;
+
+    my $nr;
+
+    for ( my $it = 1 ; $it <= $max_iter ; $it++ ) {
+
+        # Compute fitness for all elements.
+        $nr = 0;
+        for my $h (@genpool) {
+            my $i       = 0;
+            my $fitness = 0;
+            $fitness += $ftable[ $i++ ]->{'size'} * $_
+              for ( @{ $h->{'data'} } );
+            $fitness = 0 if $fitness > $real_cap;
+            $fitness /= $real_cap;
+            $h->{'fitness'} = $fitness;
+            $nr++;
+        }
+
+        my $nr_good = 0;
+        for (@genpool) {
+            $nr_good++ if $_->{'fitness'};
+        }
+        my $nr_bad = scalar @genpool - $nr_good;
+        @genpool = sort { $b->{'fitness'} cmp $a->{'fitness'} } @genpool;
+        my $best = $genpool[0]->{'fitness'};
+
+        print $df "$it $best\n" if $df;
+
+        print STDERR "Fit: $nr_good not-fit: $nr_bad  best: $best\n";
+
+        if ( $best_req && $best >= $best_req ) {
+            print STDERR "Fitness sufficient, exitting.\n";
+            last;
+        }
+
+        if ( $nr_bad < $nr_good ) {
+            print STDERR "Dropping "
+              . ( scalar(@genpool) / 2 - $nr_bad )
+              . " candidates.\n";
+            $nr_bad = $nr_good = scalar(@genpool) / 2;
+        }
+
+        print STDERR "$it/$max_iter Mutating $nr_bad candidates.\n";
+        for ( my $j = 0 ; $j < $nr_bad ; $j++ ) {
+            $genpool[ $j + $nr_good ] = dclone( $genpool[ $j % $nr_good ] );
+            gen_mutate $genpool[ $j + $nr_good ]->{'data'};
+        }
+    }
+
+    close $df if $df;
+
+    return 0 if !$genpool[0]->{'fitness'};    # no usable result
+
+    $nr = 0;
+    my $gsize = 0;
+    for ( @{ $genpool[0]->{'data'} } ) {
+        if ($_) {
+            push @{$ret}, $nr;
+            $gsize += $ftable[$nr]->{'size'};
+        }
+        $nr++;
+    }
+
+    return $gsize;
+}
+
+my $myres = [];
+my $gsize = gen_combine $myres;
+for ( @{$myres} ) {
+    print "$ftable[$_]{'name'}\n";
+    $ftable[$_] = '';
+}
+my $eff = sprintf( "%.2f", 100 * $gsize / $real_cap );
+print STDERR "$gsize/$real_cap ($eff%, "
+  . ( $real_cap - $gsize )
+  . " bytes left)\n";
+
+$end_time = time;
+
+$end_time -= $start_time;
+if ($end_time) {
+    my $days = int( $end_time / 86400 );
+    $end_time %= 86400;
+    my $hours = int( $end_time / 3600 );
+    $end_time %= 3600;
+    my $mins = int( $end_time / 60 );
+    my $secs = $end_time % 60;
+
+    print STDERR "Elapsed time: ";
+    print STDERR "$days days  "    if $days;
+    print STDERR "$hours hours  "  if $hours or $days;
+    print STDERR "$mins minutes  " if $mins or $hours or $days;
+    print STDERR "$secs seconds\n";
+}

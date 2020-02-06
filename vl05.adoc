@@ -323,5 +323,7 @@ image::img/vl05_party.jpg[]
 Consider there are *n* people at your party, how high is the probability that
 there is another person with the same birthday date (month/day) as you have?
 
+How high is the probability that any two persons share birthday?
+
 Consider for arbitrary *n*!
 

@@ -1,0 +1,26 @@
+== Klausur
+
+- Algorithmus
+- Komplexität Zeit/Raum, Komplexität bestimmen
+- Dynamischer Algorithmus, detailiert, Beispiel
+- Rekursiver Algorithmus, detailiert, Beispiel
+- Divide and Conquer, Back-tracking, randomisierte Algorithmen
+- Big/Little Endian
+- Binäre und hexadezimale Basis
+- B-Komplement (zweier Komplement)
+- Programmstruktur: Text, Data, BSS, Heap, Stack
+- Dynamische Datenstrukturen: LIFO, FIFO, Dictionary
+- Randomisieren, Sortieren
+- Huffman-Kodierung
+- Hash-Funktion
+- Serialisierung
+
+
+== Verwandte Bereiche
+
+- Threads, Konkurrenz, Synchronisierung
+- Version Control Systems (git, GitExtensions, etc.)
+- Design Patterns (Entwurfsmuster)
+- SQL, SQL join types
+- UML Diagramme
+- Unix/Windows Scripting

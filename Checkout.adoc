@@ -19,8 +19,9 @@
 == Verwandte Bereiche
 
 - Threads, Konkurrenz, Synchronisierung
+- Kommunikation, TCP/IP, Webserver in Java
 - Version Control Systems (git, GitExtensions, etc.)
 - Design Patterns (Entwurfsmuster)
 - SQL, SQL join types
 - UML Diagramme
-- Unix/Windows Scripting
+- Unix/Windows Shell Scripting

@@ -19,7 +19,7 @@ Any of the natural numbers, the negatives of these numbers, or zero.
 
 - Ranges
   * Signed: -(2^n-1^) to (2^n-1^ - 1)
-  * Unsigned: 0 to (2^n - 1^)
+  * Unsigned: 0 to (2^n^ - 1)
 
 - Fast hexadecimal => binary conversions because log~2~(16) = 4
 
